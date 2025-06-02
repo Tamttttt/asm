@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            background: #f5f5f5;
+        }
+
+        .column {
+            width: 100%;
+            padding: 10px 0;
+        }
+
+        .san-pham-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            width: 100%;
+        }
+
+        .san-pham {
+            display: flex;
+                align-items: center;
+                background: white;
+                width: 100%; /* Giảm kích thước xuống để có khoảng trống bên phải */
+                max-width: 94%; /* Giới hạn chiều rộng tối đa */
+                margin-left: 3%; /* Tạo khoảng trống bên trái */
+                padding: 20px;
+                box-shadow: 2px 2px 10px gray;
+                border-radius: 10px;
+        }
+
+        .san-pham:hover {
+            background-color: bisque;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+            transform: scale(1.02);
+        }
+
+        .san-pham img {
+            width: 250px;
+            border-radius: 10px;
+            margin-right: 20px;
+        }
+
+        .info {
+            flex: 1;
+        }
+
+        .ten {
+            font-size: 24px;
+            font-variant: small-caps;
+            color: blue;
+            font-weight: bold;
+        }
+
+        .gia {
+            margin-top: 10px;
+            font-size: 22px;
+            font-weight: bold;
+            color: red;
+        }
+
+        .gia del {
+            color: gray;
+            font-size: 18px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .san-pham {
+                flex-direction: column;
+                text-align: center;
+                width: 95%;
+            }
+
+            .san-pham img {
+                margin: 0 0 15px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="column">
+        <a href="NhatBan.html" class="san-pham-link">
+            <div class="san-pham">  
+                <img src="/ASM1/images/Nhật Bản.jpg" alt="">
+                    <div class="gia">
+                        <div class="ten">Nhật Bản</div>
+                        <del>16.000.000 VNĐ</del> 14.500.000 VNĐ 
+                    </div> 
+                </div>
+            </div>
+        </a>
+        <div class="column">
+            <div class="san-pham">  
+                <img src="/ASM1/images/Hàn Quốc.jpg" alt="">
+                    <div class="gia"> 
+                    <div class="ten">Hàn Quốc</div>
+                    <del>15.000.000 VNĐ</del> 13.550.000 VNĐ
+                </div> 
+            </div> 
+        </div>
+        <div class="column">
+            <div class="san-pham">  
+                <img src="/ASM1/images/Thụy Điển.jpg" alt="">
+                    <div class="gia"> 
+                    <div class="ten">Thụy Điển</div>
+                    <del>19.000.000 VNĐ</del> 17.500.000 VNĐ
+                </div> 
+            </div>
+        </div>
+        <div class="column">
+            <div class="san-pham">  
+                <img src="/ASM1/images/Tây Ban Nha.jpg" alt="">
+                    <div class="gia"> 
+                    <div class="ten">Tây Ban Nha</div>
+                    <del>20.000.000 VNĐ</del> 18.500.000 VNĐ 
+                </div> 
+            </div>  
+        </div>
+</body>
+</html>

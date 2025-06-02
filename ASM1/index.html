@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khám Phá Việt Nam</title>
+</head>
+<link rel="stylesheet" href="asm1.css">
+<body>
+    <div class="container">
+        <img src="/ASM1/images/logo.png" alt="Logo">
+        <div class="nav-links">
+            <a href="index.html">TRANG CHỦ</a>
+            <a href="VeMayBay.html" target="page">VÉ MÁY BAY</a>
+            <a href="Hotel.html" target="page">KHÁCH SẠN</a>
+            <a href="ThueXe.html" target="page">THUÊ XE</a>
+            <div class="dropdown">
+                <a href="#">≡</a>
+                <div class="dropdown-content">
+                    <a href="Login.html">Đăng nhập</a>
+                    <a href="SignIn.html">Đăng kí</a>
+                    <a href="index.html">Đăng xuất</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="additional-image" style="text-align: center; padding: 20px;">
+            <!-- Input điều khiển -->
+    <input type="radio" name="slider" id="s1" checked>
+    <input type="radio" name="slider" id="s2">
+    <input type="radio" name="slider" id="s3">
+
+    <!-- Slider full width -->
+    <div class="slider-container">
+    <div class="slides">
+        <div class="slide">
+            <img src="/ASM1/images/Ảnh nền 1.jpg" alt="Slide 1">
+        </div>
+        <div class="slide">
+            <img src="/ASM1/images/Hàn Quốc.jpg" alt="Slide 2">
+        </div>
+        <div class="slide">
+            <img src="/ASM1/images/Nhật Bản.jpg" alt="Slide 3">
+        </div>
+    </div>
+
+    <!-- Nút chấm tròn -->
+    <div class="nav-dots">
+        <label for="s1"></label>
+        <label for="s2"></label>
+        <label for="s3"></label>
+    </div>
+</div>
+<script>
+        let current = 1;
+        const totalSlides = 3;         // Số lượng slide
+        const intervalTime = 5000;    // 10 giây
+        let interval;
+        
+        function startAutoSlide() {
+        interval = setInterval(() => {
+            current = current % totalSlides + 1;
+            document.getElementById(`s${current}`).checked = true;
+        }, intervalTime);
+        }
+    
+        function resetAutoSlide() {
+        clearInterval(interval);
+        startAutoSlide();
+        }
+    
+        // Nếu người dùng bấm chấm tròn, reset lại auto slide
+        document.querySelectorAll('input[name="slider"]').forEach((radio) => {
+        radio.addEventListener('change', () => {
+            current = parseInt(radio.id.replace('s', ''));
+            resetAutoSlide();
+        });
+        });
+    
+        // Bắt đầu tự chạy khi trang được load
+        startAutoSlide();
+    </script>
+</div>
+<div class="menu-container">
+        <a href="Dulich2.html" target="page" class="menu-item black">
+            <div class="menu-icon"><img src="/ASM1/images/1.png" alt=""></div>
+            Tour <b>TRONG NƯỚC</b>
+        </a>
+        <a href="dulich1.html" target="page" class="menu-item blue">
+            <div class="menu-icon"><img src="/ASM1/images/2.png" alt=""></div>
+            Tour <b>NƯỚC NGOÀI</b>
+        </a>
+        <a href="ThueXe.html" target="page" class="menu-item pink">
+            <div class="menu-icon"><img src="/ASM1/images/3.png" alt=""></div>
+            Dịch vụ <b>Thuê Xe</b>
+        </a>
+        <a href="VeMayBay.html" target="page" class="menu-item cyan">
+            <div class="menu-icon"><img src="/ASM1/images/4.png" alt=""></div>
+            <b>VÉ MÁY BAY GIÁ RẺ</b>
+        </a>
+        <a href="Hotel.html" target="page" class="menu-item green">
+            <div class="menu-icon"><img src="/ASM1/images/5.png" alt=""></div>
+            <b>ĐẶT KHÁCH SẠN</b>
+        </a>
+    </div>
+    <article>
+        <iframe name="page" src="/ASM1/dulich1.html" scrolling="auto" frameborder="0"></iframe>
+    </article> 
+    <footer>
+        Du lịch đi bạn © 2025. All rights reserved.
+        <script src="https://uhchat.net/code.php?f=f91740"></script>
+    </footer>
+</body>
+</html>

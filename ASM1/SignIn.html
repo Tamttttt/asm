@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Đăng Ký</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            width: 350px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-control {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .btn {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 48%;
+            cursor: pointer;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="fullname">Họ và Tên:</label>
+                <input type="text" id="fullname" name="fullname" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>Giới tính:</label><br>
+                <input type="radio" name="gender" value="Nam" checked> Nam
+                <input type="radio" name="gender" value="Nữ"> Nữ
+            </div>
+            <div class="form-group">
+                <label for="image">Hình ảnh:</label>
+                <input type="file" id="image" name="image" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="country">Quốc tịch:</label>
+                <select id="country" name="country" class="form-control">
+                    <option value="Vietnam" selected>Việt Nam</option>
+                    <option value="USA">United States</option>
+                    <option value="UK">United Kingdom</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Sở thích:</label><br>
+                <input type="checkbox" name="hobby" value="Thể thao"> Thể thao
+                <input type="checkbox" name="hobby" value="Du lịch" checked> Du lịch
+                <input type="checkbox" name="hobby" value="Âm nhạc"> Âm nhạc
+                <input type="checkbox" name="hobby" value="Ẩm thực"> Ẩm thực
+            </div>
+            <div class="form-group">
+                <label for="notes">Ghi chú:</label>
+                <textarea id="notes" name="notes" class="form-control" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn">Đăng ký</button>
+            <button type="reset" class="btn">Nhập lại</button>
+        </form>
+    </div>
+</body>
+</html>

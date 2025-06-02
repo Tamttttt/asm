@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column; /* Xếp sản phẩm thành từng hàng */
+            align-items: center; /* Canh giữa nội dung */
+            width: 100%;
+            background-color: #f5f5f5;
+        }
+
+        .column {
+            width: 100%; /* Chiếm toàn bộ chiều rộng */
+            padding: 10px 0; /* Thêm khoảng cách giữa các hàng */
+        }
+
+        .san-pham {
+            display: flex;
+            align-items: center;
+            background: white;
+            width: 100%; /* Giảm kích thước xuống để có khoảng trống bên phải */
+            max-width: 93%; /* Giới hạn chiều rộng tối đa */
+            margin-left: 3%; /* Tạo khoảng trống bên trái */
+            padding: 20px;
+            box-shadow: 2px 2px 10px gray;
+            border-radius: 10px;
+            transition: all 0.3s ease-in-out;
+            position: relative; /* Để có thể sử dụng vị trí tuyệt đối cho các phần tử con */
+        }
+
+        .san-pham img {
+            width: 250px;
+            height: auto;
+            border-radius: 10px;
+            margin-right: 20px;
+        }
+
+        .san-pham .info {
+            flex: 1; 
+        }
+
+        .san-pham .ten {
+            font-size: 24px;
+            font-variant: small-caps;
+            color: blue;
+            font-weight: bold;
+        }
+
+        .san-pham .gia {
+            color: red;
+            font-weight: bold;
+            font-size: 22px;
+            margin-top: 10px;
+        }
+
+        .san-pham .gia del {
+            color: gray;
+            font-size: 18px;
+        }
+
+        /* Hiệu ứng hover */
+        .san-pham:hover {
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+            background-color: bisque;
+            transform: scale(1.02);
+            transition: all 0.3s ease-in-out;
+        }
+
+        /* Responsive cho màn hình nhỏ */
+        @media (max-width: 768px) {
+            .san-pham {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                width: 100%;
+                margin-left: 0;
+            }
+
+            .san-pham img {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+        }
+    </style>
+</head>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v22.0"></script>
+<body>
+    <div class="column"> 
+        <div class="san-pham">  
+            <img src="/ASM1/images/Nhật Bản.jpg" alt="">
+                <div class="gia">
+                    <div class="ten">Nhật Bản</div> 
+                    <del>16.000.000 VNĐ</del> 14.500.000 VNĐ 
+                    <p>
+                        Nhật Bản (Nhật: 日本 Hepburn: Nihonⓘ hoặc Nipponⓘ?),
+                        tên đầy đủ là Nhật Bản Quốc (日本国 Nihon-koku hoặc Nippon-koku?),
+                        [16] là một quốc gia và đảo quốc ở khu vực Đông Á, nằm bên rìa phía đông
+                        của biển Nhật Bản và biển Hoa Đông, phía tây giáp với bán đảo Triều Tiên
+                        qua biển Nhật Bản, phía bắc giáp với vùng Viễn Đông của Nga qua biển Okhotsk
+                        và phía nam giáp với đảo Đài Loan qua biển Hoa Đông.
+                    </p>
+                </div> 
+             </div>
+        </div>
+    <footer>
+        Du lịch đi bạn © 2025. All rights reserved.
+    </footer>
+    <script src="https://uhchat.net/code.php?f=f91740"></script>
+    <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width="" data-layout="" data-action="" data-size="" data-share="true"></div>
+      <hr>
+      <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="" data-size=""><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Chia sẻ</a></div>
+      <div class="fb-comments" data-href="https://developers.facebook.com/docs/plugins/comments#configurator" data-width="" data-numposts="5"></div>
+    <hr>
+</body>
+</html>
